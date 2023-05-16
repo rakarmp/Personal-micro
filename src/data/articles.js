@@ -42,6 +42,6 @@ function article_2() {
   };
 }
 
-const myArticles = [article_1];
+const myArticles = [article_1, article_2];
 
 export default myArticles;
