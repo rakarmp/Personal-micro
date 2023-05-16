@@ -2,29 +2,23 @@
 
 Reactfolio is a modern and customizable personal portfolio web template built using the popular React library. It provides an easy way for developers, designers, and creatives to showcase their work, skills, and achievements in a professiona and visually appealing way. With its responsive design and clean code, Reactfolio can be easily tailored to suit individual needs and preferences, making it an ideal choice for anyone looking to create a stunning online portfolio.
 
-<center>
-<img src="https://i.imgur.com/ZWPO61A.jpeg" alt="Reactfolio" />
-</center>
-
-Live demo here: <a href="https://reactfolio.tharindu.dev/" target="_blank">reactfolio.tharindu.dev</a>
-
--   [Features](#-features)
--   [Getting started](#-getting-started)
--   [Installation and Setup Instructions](#-installation-and-setup-instructions)
--   [Folder structure](#-folder-structure)
--   [Configurations](#-configurations)
--   [Contribution](#-contribution)
+- [Features](#-features)
+- [Getting started](#-getting-started)
+- [Installation and Setup Instructions](#-installation-and-setup-instructions)
+- [Folder structure](#-folder-structure)
+- [Configurations](#-configurations)
+- [Contribution](#-contribution)
 
 ## 📙 Features
 
--   📖 Multi-Page Layout
-    -   Home
-    -   About
-    -   Projects
-    -   Articles
-    -   Contact
--   📱 Fully Responsive
--   🛠 Easy configurations
+- 📖 Multi-Page Layout
+  - Home
+  - About
+  - Projects
+  - Articles
+  - Contact
+- 📱 Fully Responsive
+- 🛠 Easy configurations
 
 ## 📚 Getting started
 
@@ -42,11 +36,11 @@ The page will reload if you make edits.
 
 ## 📁 Folder structure
 
--   `/public`: publicly accessible contents (ex: images, media).
--   `/src`: all the components used in this project.
-    -   `/src/components/`: each reusable components of each pages.
-    -   `/src/data`: configurations of the web app.
-    -   `/src/pages`: pages that include in the web app.
+- `/public`: publicly accessible contents (ex: images, media).
+- `/src`: all the components used in this project.
+  - `/src/components/`: each reusable components of each pages.
+  - `/src/data`: configurations of the web app.
+  - `/src/pages`: pages that include in the web app.
 
 ## ⚙️ Configurations
 
@@ -54,31 +48,31 @@ Since this is a public and open source project, you can make any changes to it. 
 
 Directory: `/src/data/`
 
--   `articles.js`
+- `articles.js`
 
-    From this you can add your articles to the web application.
+  From this you can add your articles to the web application.
 
-    Instructions:
+  Instructions:
 
-    -   Add new article
+  - Add new article
 
-        1. Create a new function starts with `article_`. For example you can add new function named `article_3`.
+    1. Create a new function starts with `article_`. For example you can add new function named `article_3`.
 
-        2. Then add the data accordingly.
+    2. Then add the data accordingly.
 
-            - Add `<React.Fragment>` tag and it's closing tags in body.
-            - In React there has no keyword `class`, so you should use `className` to define html classes.
+       - Add `<React.Fragment>` tag and it's closing tags in body.
+       - In React there has no keyword `class`, so you should use `className` to define html classes.
 
-        3. In the last lines you will see an array to which you need to add your new `articles` function.
+    3. In the last lines you will see an array to which you need to add your new `articles` function.
 
 ```js
 function article_3() {
-	return {
-		date: "7 May 2023",
-		title: "The Benefits of Cloud Computing",
-		description:
-			"Cloud computing offers a range of benefits, including cost savings and increased flexibility. Find out why more businesses are turning to the cloud.",
-		style: `
+  return {
+    date: "7 May 2023",
+    title: "The Benefits of Cloud Computing",
+    description:
+      "Cloud computing offers a range of benefits, including cost savings and increased flexibility. Find out why more businesses are turning to the cloud.",
+    style: `
 				.article-content {
 					display: flex;
 					flex-direction: column;
@@ -90,19 +84,19 @@ function article_3() {
 					outline: 2px solid red;
 				}
 				`,
-		body: (
-			<React.Fragment>
-				<div className="article-content">
-					<div className="paragraph">Content of article 1</div>
-					<img
-						src="https://picsum.photos/200/300"
-						alt="random"
-						className="randImage"
-					/>
-				</div>
-			</React.Fragment>
-		),
-	};
+    body: (
+      <React.Fragment>
+        <div className="article-content">
+          <div className="paragraph">Content of article 1</div>
+          <img
+            src="https://picsum.photos/200/300"
+            alt="random"
+            className="randImage"
+          />
+        </div>
+      </React.Fragment>
+    ),
+  };
 }
 ```
 
@@ -110,30 +104,30 @@ function article_3() {
 const myArticles = [article_1, article_2, article_3];
 ```
 
--   `styles.css`
+- `styles.css`
 
-    From this you can change the font colors and font families of the web application.
+  From this you can change the font colors and font families of the web application.
 
 ```css
 :root {
-	/* ------- colors ------- */
-	--primary-color: #27272a;
-	--secondary-color: #65656d;
-	--tertiary-color: #acacb4;
-	--quaternary-color: #e4e4e7;
-	--link-color: #14b8a6;
-	/* ---------------------- */
+  /* ------- colors ------- */
+  --primary-color: #27272a;
+  --secondary-color: #65656d;
+  --tertiary-color: #acacb4;
+  --quaternary-color: #e4e4e7;
+  --link-color: #14b8a6;
+  /* ---------------------- */
 
-	/* ------- fonts ------- */
-	--primary-font: "Heebo", sans-serif;
-	--secondary-font: "Roboto", sans-serif;
-	/* --------------------- */
+  /* ------- fonts ------- */
+  --primary-font: "Heebo", sans-serif;
+  --secondary-font: "Roboto", sans-serif;
+  /* --------------------- */
 }
 ```
 
--   `user.js`
+- `user.js`
 
-    From this you can change the content of each page of the web application.
+  From this you can change the content of each page of the web application.
 
 ## 🌱 Contribution
 
