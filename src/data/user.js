@@ -89,6 +89,15 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/rakarmp/elibmobile-app",
     },
+
+    {
+      title: "Chatbot",
+      description:
+        "a simple app built with react native and expo along with integration of OpenAI API (ChatGPT).",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg",
+      linkText: "View Project",
+      link: "https://github.com/rakarmp/chatbot",
+    },
   ],
 };
 
