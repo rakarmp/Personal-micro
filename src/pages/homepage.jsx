@@ -15,11 +15,19 @@ import INFO from "../data/user";
 import myArticles from "../data/articles";
 
 import "./styles/homepage.css";
+import Percentageloading from "../components/loading/loading";
 
 const Homepage = () => {
   const [stayLogo, setStayLogo] = useState(false);
   const [logoSize, setLogoSize] = useState(80);
   const [oldLogoSize, setOldLogoSize] = useState(80);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
 
   useEffect(() => {
     document.title = INFO.main.title;
@@ -62,98 +70,106 @@ const Homepage = () => {
 
   return (
     <React.Fragment>
-      <div className="page-content">
-        <NavBar active="home" />
-        <div className="content-wrapper">
-          <div className="homepage-logo-container">
-            <div style={logoStyle}>
-              <Logo width={logoSize} link={false} />
-            </div>
-          </div>
-
-          <div className="homepage-container">
-            <div className="homepage-first-area">
-              <div className="homepage-first-area-left-side">
-                <div className="title homepage-title">
-                  {INFO.homepage.title}
-                </div>
-
-                <div className="subtitle homepage-subtitle">
-                  {INFO.homepage.description}
-                </div>
+      {loading ? (
+        <Percentageloading />
+      ) : (
+        <div className="page-content">
+          <NavBar active="home" />
+          <div className="content-wrapper">
+            <div className="homepage-logo-container">
+              <div style={logoStyle}>
+                <Logo width={logoSize} link={false} />
               </div>
+            </div>
 
-              <div className="homepage-first-area-right-side">
-                <div className="homepage-image-container">
-                  <div className="homepage-image-wrapper">
-                    <img
-                      src="homeimg.jpeg"
-                      alt="about"
-                      className="homepage-image"
-                    />
+            <div className="homepage-container">
+              <div className="homepage-first-area">
+                <div className="homepage-first-area-left-side">
+                  <div className="title homepage-title">
+                    {INFO.homepage.title}
+                  </div>
+
+                  <div className="subtitle homepage-subtitle">
+                    {INFO.homepage.description}
+                  </div>
+                </div>
+
+                <div className="homepage-first-area-right-side">
+                  <div className="homepage-image-container">
+                    <div className="homepage-image-wrapper">
+                      <img
+                        src="homeimg.jpeg"
+                        alt="about"
+                        className="homepage-image"
+                      />
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
 
-            <div className="homepage-socials">
-              <a href={INFO.socials.github} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon
-                  icon={faGithub}
-                  className="homepage-social-icon"
-                />
-              </a>
-              <a href={INFO.socials.instagram} target="_blank" rel="noreferrer">
-                <FontAwesomeIcon
-                  icon={faInstagram}
-                  className="homepage-social-icon"
-                />
-              </a>
-              <a
-                href={`mailto:${INFO.main.email}`}
-                target="_blank"
-                rel="noreferrer"
-              >
-                <FontAwesomeIcon
-                  icon={faMailBulk}
-                  className="homepage-social-icon"
-                />
-              </a>
-            </div>
+              <div className="homepage-socials">
+                <a href={INFO.socials.github} target="_blank" rel="noreferrer">
+                  <FontAwesomeIcon
+                    icon={faGithub}
+                    className="homepage-social-icon"
+                  />
+                </a>
+                <a
+                  href={INFO.socials.instagram}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faInstagram}
+                    className="homepage-social-icon"
+                  />
+                </a>
+                <a
+                  href={`mailto:${INFO.main.email}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <FontAwesomeIcon
+                    icon={faMailBulk}
+                    className="homepage-social-icon"
+                  />
+                </a>
+              </div>
 
-            <div className="homepage-projects">
-              <AllProjects />
-            </div>
+              <div className="homepage-projects">
+                <AllProjects />
+              </div>
 
-            <div className="homepage-after-title">
-              <div className="homepage-articles">
-                {myArticles.map((article, index) => (
-                  <div
-                    className="homepage-article"
-                    key={(index + 1).toString()}
-                  >
-                    <Article
+              <div className="homepage-after-title">
+                <div className="homepage-articles">
+                  {myArticles.map((article, index) => (
+                    <div
+                      className="homepage-article"
                       key={(index + 1).toString()}
-                      date={article().date}
-                      title={article().title}
-                      description={article().description}
-                      link={"/article/" + (index + 1)}
-                    />
-                  </div>
-                ))}
+                    >
+                      <Article
+                        key={(index + 1).toString()}
+                        date={article().date}
+                        title={article().title}
+                        description={article().description}
+                        link={"/article/" + (index + 1)}
+                      />
+                    </div>
+                  ))}
+                </div>
+
+                <div className="homepage-works">
+                  <Works />
+                </div>
               </div>
 
-              <div className="homepage-works">
-                <Works />
+              <div className="page-footer">
+                <Footer />
               </div>
-            </div>
-
-            <div className="page-footer">
-              <Footer />
             </div>
           </div>
         </div>
-      </div>
+      )}
     </React.Fragment>
   );
 };
