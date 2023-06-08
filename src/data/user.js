@@ -98,6 +98,24 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/rakarmp/chatbot",
     },
+
+    {
+      title: "Chatify",
+      description:
+        "a simple chat website allows users to interact directly with the help of pushers",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/laravel/laravel-plain.svg",
+      linkText: "View Project",
+      link: "https://github.com/rakarmp/chatify",
+    },
+
+    {
+      title: "Pytube",
+      description:
+        "pytube is a simple application that allows users to easily download YouTube videos. This application is built using Python and utilizes the tkinter module for the user interface.",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      linkText: "View Project",
+      link: "https://github.com/rakarmp/pytube",
+    },
   ],
 };
 
