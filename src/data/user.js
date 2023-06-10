@@ -116,6 +116,15 @@ const INFO = {
       linkText: "View Project",
       link: "https://github.com/rakarmp/pytube",
     },
+
+        {
+        title: "GaleriArt",
+        description: "a simple website, a collection of anime images, made using astro js",
+        logo: "https://seeklogo.com/images/A/astro-logo-B3B4DABB0A-seeklogo.com.png",
+        linkText: "View Project",
+        link: "https://github.com/rakarmp/GaleriArt"
+    }
+
   ],
 };
 
