@@ -3,7 +3,7 @@ const INFO = {
     title: "Reactfolio independent",
     name: "Rakarmp",
     email: "rakaabdirmp@gmail.com",
-    logo: "../logo.jpg",
+    logo: "../logo.jpeg",
   },
 
   socials: {
@@ -26,13 +26,6 @@ const INFO = {
       "I’m Raka Abdi Reza Maulana Putra. I live in Bandung, where I design the future.",
     description:
       "I have worked on various projects and maybe not enough for me as a fresh graduate but I am proud of the progress I have made. Many of these projects are open-source and available for others to explore and contribute to. If you're interested in any of the projects I've worked on, feel free to check out the code and suggest any fixes or enhancements you might have in mind. Collaborating with others is a great way to learn and grow, and I'm always open to new ideas and feedback.",
-  },
-
-  articles: {
-    title:
-      "I'm passionate about pushing the boundaries of what's possible and inspiring the next generation of innovators.",
-    description:
-      "Chronological collection of my long-form thoughts on programming, leadership, product design, and more.",
   },
 
   projects: [
@@ -117,12 +110,28 @@ const INFO = {
       link: "https://github.com/rakarmp/pytube",
     },
 
-        {
+    {
         title: "GaleriArt",
         description: "a simple website, a collection of anime images, made using astro js",
         logo: "https://seeklogo.com/images/A/astro-logo-B3B4DABB0A-seeklogo.com.png",
         linkText: "View Project",
         link: "https://github.com/rakarmp/GaleriArt"
+    },
+
+    {
+      title: "Bookbrain",
+      description: "Bookbrain is blog website, use AstroJS,Markdown article. Modern appearance",
+      logo: "https://seeklogo.com/images/A/astro-logo-B3B4DABB0A-seeklogo.com.png",
+      linkText: "View Project",
+      link: "https://github.com/rakarmp/bookbrain",
+    },
+
+    {
+      title: "HTTP Screen Mirroring",
+      description: "HTTP Screen Mirroring is a simple application using Python, Flask and Pillow. This application is used to display the screen of a device to a web browser.",
+      logo: "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg",
+      linkText: "View Project",
+      link: "https://github.com/rakarmp/http-screen-mirroring",
     }
 
   ],

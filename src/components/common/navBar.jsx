@@ -46,7 +46,7 @@ const NavBar = (props) => {
 										: "nav-item"
 								}
 							>
-								<Link to="/articles">Articles</Link>
+								<Link to="https://bookbrain.vercel.app/">Articles</Link>
 							</li>
 							<li
 								className={
